@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danny Stalter | Welcome</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+
+  <!-- Montserrat -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Lato -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Quicksand -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Amatic SC -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Josefin Sans -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Define Audio -->
+
+  <audio id="myAudio" src="sounds/ambiance.mp3" allow="autoplay" loop preload="auto"></audio>
+  <audio id="birdchirp1" src="sounds/birdchirp1.mp3" preload="auto"> </audio>
+  <audio id="birdchirp2" src="sounds/birdchirp2.mp3" preload="auto"> </audio>
+  <audio id="birdchirp3" src="sounds/birdchirp3.mp3" preload="auto"> </audio>
+
+  <!-- Landing Content -->
+
+  <div class="intro-container">
+    <div class="link-container">
+      <div class="link-content"><i class="fab fa-linkedin linkedin-icon icon" onclick="window.open('https://www.linkedin.com/in/daniel-stalter/')"></i></div>
+      <div class="link-content"><i class="fab fa-github-square github-icon icon" onclick="window.open('https://github.com/DannyStalter')"></i></div>
+      <div class="link-content"><i class="fas fa-file icon resume-icon" onclick="#';"></i></div>
+    </div>
+    <h1>Danny Stalter</h1>
+    <h2>Web Developer</h2>
+    <h3 class="intro-li-1">Frontend</h3>
+    <h3 class="intro-li-2">Backend</h3>
+    <h3 class="intro-li-3">UI/UX</h3>
+    <a class="arrow-down-anchor" href="#about-me"> <i class="fas fa-chevron-down arrow-down"></i></a>
+
+    <div class="audio-container" id="audio-container">
+      <i class="far fa-play-circle audio" onClick="togglePlay()"></i>
+      <p onClick="togglePlay()">Click for ambiance.</p>
+    </div>
+  </div>
+
+
+
+  <div class="sky-content">
+    <div class="cloud-container">
+      <div class="cloud"></div>
+    </div>
+    <div class="cloud-container-2">
+      <div class="cloud2"></div>
+    </div>
+    <div class="bird-container">
+      <div class="bird" onClick="document.getElementById('birdchirp' + randomChirp()).play();"></div>
+    </div>
+    <div class="bird-container-2">
+      <div class="bird2" onClick="document.getElementById('birdchirp' + randomChirp()).play();"></div>
+    </div>
+    <div class="bird-container-3">
+      <div class="bird3" onClick="document.getElementById('birdchirp' + randomChirp()).play();"></div>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+
+  <section class="about-me" id="about-me">
+
+    <div class="about-container">
+      <div class="about-content" id="about-content" revealOnScroll data-animation="move-up">
+        <img id="me-jpg" src="images/me.jpg" alt="">
+        <div class="about-text">
+          <h1>Hi! I'm Danny.</h1>
+          <p>I'm a recent graduate of Farmingdale State College's Computer Systems Program.</p>
+          <p>I'm passionate about bringing ideas to life on your computer and mobile screens.</p>
+          <p>
+            Check below for examples of my recent work!
+          </p>
+
+          <p class="about-hobbies">When I'm not focusing on web-work, you can find me nature walking, oil painting, mango green tea sipping or performing with my acapella group, Tacopella.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-container">
+      <div class="heading-flex">
+      <h1 id="projects-h1">Projects and Experiments</h1>
+      <div class="projects-row">
+        <div class="project">
+          <a href="https://dannystalter.github.io/PokePad/" target="_blank">
+            <img class="project-image" src="images/pokepad.jpg" alt="" />
+          </a>
+          <div class="text-container">
+            <h1 class="project-title">PokéPad</h1>
+            <p class="project-p">HTML5, CSS3, JavaScript, JQuery, Bootstrap</p>
+            <p class="project-p">A web-based Pokedex application. Utilizes PokeAPI to pull and display Pokemon data.</p>
+            <a href="https://dannystalter.github.io/PokePad/" target="_blank">See it here</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <a href="https://github.com/DannyStalter/OrderIn" target="_blank">
+            <img class="project-image" src="images/orderin2.png" alt="" />
+          </a>
+          <div class="text-container">
+            <h1 class="project-title">Order IN</h1>
+            <p class="project-p">HTML5, CSS3, JavaScript, JQuery, PHP, MySQL</p>
+            <p class="project-p">Fully functional online food ordering system. Senior Capstone group project.</p>
+            <a href="https://github.com/DannyStalter/OrderIn" target="_blank">See it here</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <a href="https://immense-journey-60606.herokuapp.com/" target="_blank">
+            <img class="project-image" src="images/todo.jpg" alt="" />
+          </a>
+          <div class="text-container">
+            <h1 class="project-title">To-Do List</h1>
+            <p class="project-p">HTML5, CSS3, JavaScript, Node.js, Express, MongoDB</p>
+            <p class="project-p">To-do list application with stored back-end data.</p>
+            <a href="https://immense-journey-60606.herokuapp.com/" target="_blank">See it here</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="footer">
+  &copy; <script>document.write(new Date().getFullYear())</script> Danny Stalter
+  </footer>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>

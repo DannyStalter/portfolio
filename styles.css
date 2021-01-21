@@ -1,0 +1,591 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-image: url(images/mountain-edit.jpg);
+  /* font-family: 'Amatic SC', cursive; */
+  /* font-family: 'Lato'; */
+  /* font-family: 'Quicksand', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+.testbox {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+/* Landing Content*/
+
+/* Navigation Links */
+
+.link-container {
+  color: #8B8F8E;
+  display: flex;
+  position: absolute;
+  top: 2vh;
+  right: 10vh;
+  z-index: 3;
+}
+
+.link-container .icon {
+
+  font-size: 3rem;
+  padding: 13px;
+  z-index: 3;
+}
+
+.link-container .linkedin-icon {
+  animation: nav-slide 1.8s forwards, fadein 1.8s forwards, unBold 1.8s;
+  animation-delay: 3.6s;
+  opacity: 0;
+}
+.link-container .github-icon {
+  animation: nav-slide 1.8s forwards, fadein 1.8s forwards, unBold 1.8s;
+  animation-delay: 3.7s;
+  opacity: 0;
+}
+.link-container .resume-icon {
+  align-self: center;
+  animation: nav-slide 1.8s forwards, fadein 1.8s forwards, unBold 1.8s;
+  animation-delay: 3.8s;
+  font-size: 2.75rem;
+  opacity: 0;
+}
+
+.link-content {
+  transition: color 0.5s ease-in-out, transform 1.3s ease-out;
+}
+.link-content:hover {
+  transform: scale(1.05);
+  animation-fill-mode: forwards;
+  color: #25731F;
+}
+
+@keyframes nav-slide {
+  0% { transform: translateY(-10vh) translateX(0vh);  }
+  60% {transform: translateY(1.5vh) translateX(0vh); }
+  100% { transform: translateY(0vh) translateX(0vh); }
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.intro-container h1, .intro-container h2, .intro-container h3 {
+  padding: 1px;
+  font-family: 'Amatic SC', cursive;
+}
+
+.intro-container h1 {
+  /* font-size: 80px; */
+  animation: fadein 4s, zoomin 4s forwards;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  margin-bottom: 30px;
+  opacity: 0;
+  font-size: 7.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.intro-container h2 {
+  animation: fadein 4s, move-up 1.5s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  font-weight: 700;
+  font-size: 59px;
+  margin-bottom: 10px;
+  margin-top:0;
+  opacity: 0;
+}
+
+.intro-li-1 {
+  opacity: 0;
+  animation: fadein 2s;
+  animation-delay: 2.0s;
+  animation-fill-mode: forwards;
+  /* font-size: 25px; */
+  font-size: 42px;
+}
+
+.intro-li-2{
+  opacity: 0;
+  animation: fadein 2s;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+  /* font-size: 25px; */
+  font-size: 42px;
+}
+
+.intro-li-3{
+  opacity: 0;
+  animation: fadein 2s;
+  animation-delay: 2.7s;
+  animation-fill-mode: forwards;
+  /* font-size: 25px; */
+  font-size: 42px;
+}
+
+.arrow-down {
+  color: black;
+  font-size: 28px;
+  opacity: 0;
+  animation: fadein 2s, arrow-mover 1s infinite  alternate;
+  -webkit-animation: fadein 2s, arrow-mover 1s infinite  alternate;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.arrow-down-anchor {
+  z-index: 3;
+}
+
+/* Sky Content */
+
+/* Middle bird */
+.bird {
+  background-image: url("images/bird-flying.gif");
+  background-size: auto 100%;
+  height: 78px;
+  width: 90px;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+	animation-duration: 1.3s;
+	animation-delay: -0.5s;
+}
+
+/* Lower bird */
+.bird2 {
+  background-image: url("images/bird-flying.gif");
+  background-size: auto 100%;
+  height: 74px;
+  width: 85px;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-delay: -0.5s;
+}
+
+/* Higher bird */
+.bird3 {
+  background-image: url("images/bird-flying.gif");
+  background-size: auto 100%;
+  height: 69px;
+  width: 80px;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-delay: -0.8s;
+}
+
+
+.bird-container {
+  position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+  animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 24s;
+  animation-delay: 3.7s;
+  z-index: 1;
+}
+
+.bird-container-2{
+  position: absolute;
+	top: 39%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+  animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 23s;
+  animation-delay: 15s;
+  z-index: 1;
+}
+.bird-container-3{
+  position: absolute;
+	top: 5%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+  animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 30s;
+	animation-delay: 7.5s;
+  z-index: 1;
+}
+
+.cloud {
+  background-image: url("images/cloud.png");
+  background-size: auto 100%;
+  height: 503px;
+  width: 1079px;
+  opacity: .5;
+  animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-delay: -0.8s;
+
+}
+
+.cloud2 {
+  background-image: url("images/cloud2-rotate.png");
+  background-size: auto 100%;
+  height: 503px;
+  width: 1079px;
+  opacity: .9;
+  animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-delay: -0.8s;
+}
+
+.cloud-container {
+  position: absolute;
+	top: 74%;
+	left: 110%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+  animation-name: cloudfloat-left;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 48s;
+  animation-delay: 2s;
+  z-index: 2;
+}
+
+.cloud-container-2 {
+  position: absolute;
+	top: 14%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+  animation-name: cloudfloat-right;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 53s;
+  animation-delay: 2.0s;
+  z-index: 2;
+}
+
+/* Sky Animtations */
+
+@keyframes fly-right-one {
+
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+
+	}
+
+}
+
+@keyframes cloudfloat-right {
+  0% {
+    transform: translateY(0vh) translateX(-100vh) scale(1.3);
+  }
+  100% {
+        transform: translateY(0vh) translateX(220vh) scale(1.4);
+  }
+}
+
+@keyframes cloudfloat-left {
+  0% {
+    transform: translateY(0vh) translateX(50vh) scale(1.3);
+  }
+  50% {
+    transform: translateY(1.5vh) translateX(-145vh) scale(1.8);
+  }
+  100% {
+        transform: translateY(3vh) translateX(-390vh) scale(2.4);
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(.9,.9);
+    }
+    50% {
+        transform: scale(1.03,1.03);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@keyframes move-up {
+  0% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
+
+@-webkit-keyframes arrow-mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(15px); }
+}
+
+@keyframes arrow-mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(15px); }
+}
+
+/* Audio CSS */
+
+.audio-container {
+  color: #8B8F8E;
+  transition: color 0.5s ease-in-out, transform 1.3s ease-out;
+  display: flex;
+  position: absolute;
+  top: 90vh;
+  right: 10vh;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.audio-container:hover {
+  transform: scale(1.05);
+  animation-fill-mode: forwards;
+  color: #25731F;
+}
+
+.audio-container .audio {
+  animation: slide 1.8s forwards, fadein 1.8s forwards, unBold 1.8s;
+  animation-delay: 4.0s;
+  font-size: 30px;
+  opacity: 0;
+}
+.audio-container p {
+animation: slide 1.8s forwards, fadein 1.8s forwards, unBold 1.8s;
+animation-delay: 4.5s;
+font-size: 20px;
+margin-left: 7px;
+margin-top: 19px;
+opacity: 0;
+}
+
+@keyframes slide {
+  0% { transform: translateY(0vh) translateX(50vh);  }
+  60% {transform: translateY(0vh) translateX(-1.5vh); }
+  100% { transform: translateY(0vh) translateX(0vh); }
+}
+
+@keyframes unBold {
+  0% { color: #353838;  }
+  60% {color: #353838; }
+  100% { color: #8B8F8E; }
+}
+ /* 766x505 */
+
+/* About Section */
+
+.about-container {
+  background-image: url("images/mount.jpg");
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* height: 600px; */
+  min-height: 100vh;
+  /* z-index: 3; */
+}
+
+.about-content {
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  height: auto;
+  max-height: 485px;
+  min-width: 59.9rem;
+max-width: 61.5rem;
+  width: 60%;
+  /* margin-left: 14vh; */
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0;
+  z-index: 3;
+}
+
+.about-content:hover {
+  transform: scale(1.2);
+}
+
+.about-content.animate {
+  animation: move-up 1.2s, fadein 1.2s forwards;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+}
+
+#me-jpg {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+  width: 100%;
+  max-height: 485px;
+  max-width: 322px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+  padding: 10px;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+.about-text p {
+font-size: 1.2rem;
+margin-right: .5rem;
+width: 90%;
+}
+
+.about-hobbies {
+  font-size: .5rem;
+  color: #90908c;
+}
+
+@media screen and (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: auto;
+  background-image: url('images/stone.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.heading-flex {
+text-align: center;
+}
+
+#projects-h1 {
+  color: white;
+  margin-top: 3rem;
+}
+
+.projects-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project {
+  height: 35rem;
+  width: 25rem;
+  min-width: 24.75rem;
+  margin: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform .3s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.2);
+}
+
+.project-image {
+  height: 60%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.project .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project h1 {
+  margin-top: 1.3rem;
+  text-align: center;
+}
+
+.project p {
+  text-align: center;
+  width: 90%;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  background-color: #101010;
+  color: white;
+  height: 4rem;
+  width: auto;
+}
+
+/* @media (max-width: 1085px) {
+
+} */
