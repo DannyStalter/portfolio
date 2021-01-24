@@ -280,7 +280,7 @@ body {
 .cloud-container-2 {
   position: absolute;
 	top: 14%;
-	left: -10%;
+	left: -20%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
   animation-name: cloudfloat-right;
