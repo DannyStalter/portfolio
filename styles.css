@@ -144,7 +144,7 @@ body {
   font-size: 42px;
 }
 
-.arrow-down {
+.arrow-down-intro {
   color: black;
   font-size: 28px;
   opacity: 0;
@@ -505,6 +505,16 @@ width: 90%;
   color: #90908c;
 }
 
+.arrow-down-about {
+  color: black;
+  font-size: 28px;
+  animation: arrow-mover 1s infinite  alternate;
+  -webkit-animation: arrow-mover 1s infinite  alternate;
+  animation-fill-mode: forwards;
+  width: 60%;
+  text-align: center;
+}
+
 /* Projects Section */
 
 .projects-container {
@@ -517,10 +527,13 @@ width: 90%;
   background-image: url('images/stone.jpg');
   background-position: center;
   background-size: cover;
+  text-align: center;
 }
 
 .heading-flex {
 text-align: center;
+display: flex;
+flex-direction: column;
 }
 
 #projects-h1 {
@@ -538,7 +551,6 @@ text-align: center;
 .project {
   height: 35rem;
   width: 25rem;
-  min-width: 24.75rem;
   margin: 3rem;
   background: white;
   border-radius: 20px;
@@ -584,7 +596,33 @@ text-align: center;
   width: auto;
 }
 
+@media screen and (max-width: 1425px) {
+.project {
+  height: 28rem;
+  width: 18rem;
+}
+.project h1{
+  font-size: 1.5rem;
+}
+.project p{
+  font-size: .7rem;
+}
+}
+
 @media screen and (max-width: 700px) {
+  .link-container {
+    position: inherit;
+  }
+
+  .audio-container {
+    margin-top: 2rem;
+    position: inherit;
+  }
+
+  .about-container{
+    height: fit-content;
+  }
+
   .about-content {
     flex-direction: column;
     background-color: transparent;
@@ -599,13 +637,19 @@ text-align: center;
   .about-text {
     background-color: white;
     text-align: center;
+    width: 100%;
+    margin-left: 0;
   }
 
   .about-text h1 {
     font-size: 2rem;
+    width: auto;
   }
+
   .about-text p {
   font-size: 2.3vw;
+  width: auto;
+  margin-right: 0;
   }
 
   .about-hobbies {
@@ -613,13 +657,29 @@ text-align: center;
     color: #90908c;
     width: 50%;
   }
-
+  .arrow-down-about {
+    font-size: 1.5rem;
+    width: 100%;
+  }
   .projects-row {
     display: block;
     min-height: 0;
+    flex-direction: column;
+  }
+  .projects-container {
+    height: fit-content;
+  }
+  .project {
+    height: 35rem;
+    width: 25rem;
+  }
+  .project h1{
+    font-size: 2rem;
+  }
+  .project p{
+    font-size: 1rem;
   }
   .heading-flex:{
     min-height: 0;
   }
-
 }
