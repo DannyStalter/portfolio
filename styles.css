@@ -4,28 +4,23 @@ html, body {
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  html,
-  body {
-    scroll-behavior: smooth;
+html, body {
+  scroll-behavior: smooth;
   }
 }
 
 body {
   background-image: url(images/mountain-edit.jpg);
-  /* font-family: 'Amatic SC', cursive; */
-  /* font-family: 'Lato'; */
-  /* font-family: 'Quicksand', sans-serif; */
-  font-family: 'Josefin Sans', sans-serif;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
 }
 
 .testbox {
+  background-color: red;
   height: 100px;
   width: 100px;
-  background-color: red;
 }
 
 /* Landing Content*/
@@ -36,13 +31,12 @@ body {
   color: #8B8F8E;
   display: flex;
   position: absolute;
-  top: 2vh;
   right: 10vh;
+  top: 2vh;
   z-index: 3;
 }
 
 .link-container .icon {
-
   font-size: 3rem;
   padding: 13px;
   z-index: 3;
@@ -70,9 +64,9 @@ body {
   transition: color 0.5s ease-in-out, transform 1.3s ease-out;
 }
 .link-content:hover {
-  transform: scale(1.05);
   animation-fill-mode: forwards;
   color: #25731F;
+  transform: scale(1.05);
 }
 
 @keyframes nav-slide {
@@ -82,9 +76,9 @@ body {
 }
 
 .intro-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
@@ -99,10 +93,10 @@ body {
   animation: fadein 4s, zoomin 4s forwards;
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  margin-bottom: 30px;
-  opacity: 0;
   font-size: 7.5rem;
   font-weight: 700;
+  margin-bottom: 30px;
+  opacity: 0;
   white-space: nowrap;
 }
 
@@ -110,48 +104,48 @@ body {
   animation: fadein 4s, move-up 1.5s;
   animation-delay: 1.8s;
   animation-fill-mode: forwards;
-  font-weight: 700;
   font-size: 59px;
+  font-weight: 700;
   margin-bottom: 10px;
   margin-top:0;
   opacity: 0;
 }
 
 .intro-li-1 {
-  opacity: 0;
   animation: fadein 2s;
   animation-delay: 2.0s;
   animation-fill-mode: forwards;
   /* font-size: 25px; */
   font-size: 42px;
+  opacity: 0;
 }
 
 .intro-li-2{
-  opacity: 0;
   animation: fadein 2s;
   animation-delay: 2.3s;
   animation-fill-mode: forwards;
   /* font-size: 25px; */
   font-size: 42px;
+  opacity: 0;
 }
 
 .intro-li-3{
-  opacity: 0;
   animation: fadein 2s;
   animation-delay: 2.7s;
   animation-fill-mode: forwards;
   /* font-size: 25px; */
   font-size: 42px;
+  opacity: 0;
 }
 
 .arrow-down-intro {
-  color: black;
-  font-size: 28px;
-  opacity: 0;
   animation: fadein 2s, arrow-mover 1s infinite  alternate;
   -webkit-animation: fadein 2s, arrow-mover 1s infinite  alternate;
   animation-delay: 3.5s;
   animation-fill-mode: forwards;
+  color: black;
+  font-size: 28px;
+  opacity: 0;
 }
 
 .arrow-down-anchor {
@@ -162,132 +156,131 @@ body {
 
 /* Middle bird */
 .bird {
+  animation-delay: -0.5s;
+	animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(10);
   background-image: url("images/bird-flying.gif");
   background-size: auto 100%;
   height: 78px;
   width: 90px;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-	animation-duration: 1.3s;
-	animation-delay: -0.5s;
 }
 
 /* Lower bird */
 .bird2 {
+  animation-delay: -0.5s;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+  animation-timing-function: steps(10);
   background-image: url("images/bird-flying.gif");
   background-size: auto 100%;
   height: 74px;
   width: 85px;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-	animation-duration: 1s;
-	animation-delay: -0.5s;
 }
 
 /* Higher bird */
 .bird3 {
+  animation-delay: -0.8s;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+  animation-timing-function: steps(10);
   background-image: url("images/bird-flying.gif");
   background-size: auto 100%;
   height: 69px;
   width: 80px;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-	animation-delay: -0.8s;
 }
 
 
 .bird-container {
+  animation-delay: 3.7s;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
   position: absolute;
+  left: -10%;
 	top: 20%;
-	left: -10%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
-  animation-name: fly-right-one;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-  animation-duration: 24s;
-  animation-delay: 3.7s;
   z-index: 1;
 }
 
 .bird-container-2{
+  animation-delay: 15s;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
   position: absolute;
+  left: -10%;
 	top: 39%;
-	left: -10%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
-  animation-name: fly-right-one;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-  animation-duration: 23s;
-  animation-delay: 15s;
   z-index: 1;
 }
 .bird-container-3{
+  animation-delay: 7.5s;
+  animation-duration: 30s;
+  animation-name: fly-right-one;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   position: absolute;
+  left: -10%;
 	top: 5%;
-	left: -10%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
-  animation-name: fly-right-one;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-  animation-duration: 30s;
-	animation-delay: 7.5s;
   z-index: 1;
 }
 
 .cloud {
+  animation-delay: -0.8s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(10);
   background-image: url("images/cloud.png");
   background-size: auto 100%;
   height: 503px;
   width: 1079px;
   opacity: .5;
-  animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-	animation-delay: -0.8s;
-
 }
 
 .cloud2 {
+  animation-delay: -0.8s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(10);
   background-image: url("images/cloud2-rotate.png");
   background-size: auto 100%;
   height: 503px;
   width: 1079px;
   opacity: .9;
-  animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-	animation-delay: -0.8s;
 }
 
 .cloud-container {
+  animation-delay: 2s;
+  animation-duration: 48s;
+  animation-iteration-count: infinite;
+  animation-name: cloudfloat-left;
+  animation-timing-function: linear;
   position: absolute;
 	top: 74%;
 	left: 110%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
-  animation-name: cloudfloat-left;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-  animation-duration: 48s;
-  animation-delay: 2s;
   z-index: 2;
 }
 
 .cloud-container-2 {
+  animation-delay: 2.0s;
+  animation-duration: 53s;
+  animation-iteration-count: infinite;
+  animation-name: cloudfloat-right;
+  animation-timing-function: linear;
   position: absolute;
 	top: 14%;
 	left: -20%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
-  animation-name: cloudfloat-right;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-  animation-duration: 53s;
-  animation-delay: 2.0s;
   z-index: 2;
 }
 
@@ -335,7 +328,7 @@ body {
     transform: translateY(0vh) translateX(-100vh) scale(1.3);
   }
   100% {
-        transform: translateY(0vh) translateX(220vh) scale(1.4);
+    transform: translateY(0vh) translateX(220vh) scale(1.4);
   }
 }
 
@@ -347,7 +340,7 @@ body {
     transform: translateY(1.5vh) translateX(-145vh) scale(1.8);
   }
   100% {
-        transform: translateY(3vh) translateX(-390vh) scale(2.4);
+    transform: translateY(3vh) translateX(-390vh) scale(2.4);
   }
 }
 
@@ -386,22 +379,22 @@ body {
 /* Audio CSS */
 
 .audio-container {
+  align-items: center;
   color: #8B8F8E;
-  transition: color 0.5s ease-in-out, transform 1.3s ease-out;
   display: flex;
-  position: absolute;
-  top: 90vh;
-  right: 10vh;
   font-size: 30px;
   justify-content: center;
-  align-items: center;
+  position: absolute;
+  right: 10vh;
+  top: 90vh;
+  transition: color 0.5s ease-in-out, transform 1.3s ease-out;
   z-index: 3;
 }
 
 .audio-container:hover {
-  transform: scale(1.05);
   animation-fill-mode: forwards;
   color: #25731F;
+  transform: scale(1.05);
 }
 
 .audio-container .audio {
@@ -421,13 +414,13 @@ opacity: 0;
 
 @keyframes slide {
   0% { transform: translateY(0vh) translateX(50vh);  }
-  60% {transform: translateY(0vh) translateX(-1.5vh); }
+  60% { transform: translateY(0vh) translateX(-1.5vh); }
   100% { transform: translateY(0vh) translateX(0vh); }
 }
 
 @keyframes unBold {
   0% { color: #353838;  }
-  60% {color: #353838; }
+  60% { color: #353838; }
   100% { color: #8B8F8E; }
 }
  /* 766x505 */
@@ -435,12 +428,12 @@ opacity: 0;
 /* About Section */
 
 .about-container {
+  align-items: center;
   background-image: url("images/mount.jpg");
   background-size: cover;
-  position: relative;
-  align-items: center;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  position: relative;
   /* height: 600px; */
   min-height: 100vh;
   /* z-index: 3; */
@@ -448,16 +441,16 @@ opacity: 0;
 
 .about-content {
   align-items: center;
+  background-color: white;
+  border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   height: auto;
   max-height: 485px;
   min-width: 59.9rem;
-max-width: 61.5rem;
+  max-width: 61.5rem;
   width: 60%;
   /* margin-left: 14vh; */
-  background-color: white;
-  border-radius: 20px;
   opacity: 0;
   z-index: 3;
 }
@@ -493,47 +486,47 @@ max-width: 61.5rem;
   margin-bottom: 1.5rem;
 }
 .about-text p {
-font-size: 1.2rem;
-margin-right: .5rem;
-width: 90%;
+  font-size: 1.2rem;
+  margin-right: .5rem;
+  width: 90%;
 }
 
 .about-hobbies {
+  color: #90908c;
   font-size: 1.1rem;
   margin-right: .5rem;
   width: 90%;
-  color: #90908c;
 }
 
 .arrow-down-about {
-  color: black;
-  font-size: 28px;
   animation: arrow-mover 1s infinite  alternate;
   -webkit-animation: arrow-mover 1s infinite  alternate;
   animation-fill-mode: forwards;
-  width: 60%;
+  color: black;
+  font-size: 28px;
   text-align: center;
+  width: 60%;
 }
 
 /* Projects Section */
 
 .projects-container {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 800px;
-  width: auto;
   background-image: url('images/stone.jpg');
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 800px;
+  width: auto;
   text-align: center;
 }
 
 .heading-flex {
-text-align: center;
 display: flex;
 flex-direction: column;
+text-align: center;
 }
 
 #projects-h1 {
@@ -542,19 +535,19 @@ flex-direction: column;
 }
 
 .projects-row {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
 }
 
 .project {
-  height: 35rem;
-  width: 25rem;
-  margin: 3rem;
   background: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 35rem;
+  width: 25rem;
+  margin: 3rem;
   transition: transform .3s ease-in-out;
 }
 
@@ -563,16 +556,16 @@ flex-direction: column;
 }
 
 .project-image {
-  height: 60%;
-  width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  height: 60%;
+  width: 100%;
 }
 
 .project .text-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -586,45 +579,44 @@ flex-direction: column;
   width: 90%;
 }
 .footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  position: static;
   background-color: #101010;
   color: white;
+  display: flex;
+  justify-content: center;
+  position: static;
   height: 4rem;
   width: auto;
 }
 
 @media screen and (max-width: 1425px) {
-.project {
-  height: 28rem;
-  width: 18rem;
-}
-.project h1{
-  font-size: 1.5rem;
-}
-.project p{
-  font-size: .7rem;
-}
+  .project {
+    height: 28rem;
+    width: 18rem;
+  }
+  .project h1{
+    font-size: 1.5rem;
+  }
+  .project p{
+    font-size: .7rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .intro-container h1 {
     font-size: 5.7rem;
-  }
+    }
   .link-container {
     position: inherit;
-  }
+    }
 
   .audio-container {
     margin-top: 2rem;
     position: inherit;
-  }
+    }
 
   .about-container{
-
-  }
+    }
 
   .about-content {
     flex-direction: column;
@@ -650,9 +642,9 @@ flex-direction: column;
   }
 
   .about-text p {
-  font-size: 2.3vw;
-  width: auto;
-  margin-right: 0;
+    font-size: 2.3vw;
+    width: auto;
+    margin-right: 0;
   }
 
   .about-hobbies {
