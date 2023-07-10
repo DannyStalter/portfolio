@@ -1,45 +1,31 @@
-// var htmlBar = document.querySelector('.html-bar');
-// var htmlLength = htmlBar.style.width.slice(0, -1);
-// var cssBar = document.querySelector('.css-bar');
-// varcssLength = cssBar.style.width.slice(0, -1);
-//
-// document.addEventListener("DOMContentLoaded", function() {
-//
-//
-//   var width = 0;
-//   var id = setInterval(frame, 10);
-//   function frame() {
-//     if (width >= htmlLength) {
-//       clearInterval(id);
-//     } else {
-//       width++;
-//       htmlBar.style.width = width + '%';
-//       htmlBar.innerHTML = width * 1  + '%';
-//     }
-//   }
-// });
+var danSmall = document.querySelector('.dan-small');
+var danLarge = document.querySelector('.dan-large');
+var hamburger = document.querySelector('.hamburger');
+var navLinks = document.querySelector('.navlinks');
 
+//Hamburger menu open/close
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
 
+//Nav Links close menu on click
+document.querySelectorAll('.navlinks').forEach(n => n.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+}));
 
-
-// Iterates through each class, but animation effect happens too quickly.
-// let classArray = ['.html-bar', '.css-bar', '.javascript-bar', '.php-bar', '.react-bar'];
-// for (var i = 0; i < classArray.length; i++) {
-//   var elem = document.querySelector(classArray[i]);
-//   var barLength = elem.style.width.slice(0, -1);
-//
-//   var width = 0;
-//   var id = setInterval(frame, 10);
-//
-//   function frame() {
-//     if (width >= barLength) {
-//       clearInterval(id);
-//     } else {
-//       width++;
-//       elem.style.width = width + '%';
-//       elem.innerHTML = width * 1  + '%';
-//     }
-//   };
-//   console.log(elem);
-//   console.log(classArray[i]);
-// }
+//Responsive picture resizing
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        danSmall.classList.add('hide');
+        danLarge.classList.remove('hide');
+    } else {
+        danSmall.classList.remove('hide');
+        danLarge.classList.add('hide');
+    }
+  }
+  
+  var x = window.matchMedia("(min-width: 978px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes - depreciated but listed in W3Schools
